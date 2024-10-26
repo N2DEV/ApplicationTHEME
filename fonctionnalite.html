@@ -1,0 +1,317 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonctionnalités - AppFlow</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #2D9CDB;
+  --secondary: #FFFFFF;
+  --accent: #F2994A;
+  --text-primary: #4F4F4F;
+  --text-secondary: #828282;
+  --gradient-bg: linear-gradient(135deg, #f5f9ff 0%, #ecf4ff 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.navbar {
+  background: white;
+  padding: 1rem 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.cta-button {
+  background: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.hero {
+  margin-top: 80px;
+  padding: 6rem 5%;
+  background: var(--gradient-bg);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon i {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.feature-image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
+
+.feature-demo {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 4rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.demo-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.demo-screen {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.demo-screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-content">
+    <a href="index.html"><img src="https://via.placeholder.com/120x40?text=AppFlow" alt="AppFlow Logo" class="logo"></a>
+    <div class="nav-links">
+      <a href="fonctionnalite.html">Fonctionnalités</a>
+      <a href="tarif.html">Tarifs</a>
+      <a href="apropos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="tarif.html" class="cta-button">Essai Gratuit</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Fonctionnalités Puissantes</h1>
+  <p>Découvrez comment AppFlow transforme votre façon de travailler avec des outils innovants et intuitifs.</p>
+</section>
+
+<div class="features-grid">
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-tasks"></i>
+    </div>
+    <h3>Gestion de Projets</h3>
+    <p>Gérez vos projets efficacement avec notre interface intuitive et nos outils de collaboration avancés.</p>
+    <img src="images/gestionprojet.jpg"Interface de gestion de projet avec tableau kanban et statistiques" class="feature-image">
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-chart-line"></i>
+    </div>
+    <h3>Analyses Détaillées</h3>
+    <p>Suivez vos performances avec des tableaux de bord personnalisables et des rapports en temps réel.</p>
+    <img src="images/analysedetaille.jpg" alt="Dashboard analytique avec graphiques et KPIs" class="feature-image">
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-users"></i>
+    </div>
+    <h3>Collaboration d'Équipe</h3>
+    <p>Travaillez ensemble efficacement avec des outils de communication intégrés et le partage de fichiers.</p>
+    <img src="images/colabequipe.jpg" alt="Interface de collaboration d'équipe avec chat et partage de fichiers" class="feature-image">
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-mobile-alt"></i>
+    </div>
+    <h3>Application Mobile</h3>
+    <p>Restez productif en déplacement avec notre application mobile puissante et intuitive.</p>
+    <img src="images/applicationmobile.jpg" alt="Application mobile AppFlow sur smartphone" class="feature-image">
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+    <h3>Sécurité Avancée</h3>
+    <p>Protégez vos données avec le chiffrement de bout en bout et l'authentification multi-facteurs.</p>
+    <img src="images/securiteavancer.jpg" alt="Interface de paramètres de sécurité et chiffrement" class="feature-image">
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-robot"></i>
+    </div>
+    <h3>Automatisation IA</h3>
+    <p>Automatisez les tâches répétitives grâce à notre intelligence artificielle intégrée.</p>
+    <img src="images/automatisationia.jpg" alt="Interface d'automatisation avec IA et flux de travail" class="feature-image">
+  </div>
+</div>
+
+<section class="feature-demo">
+  <div class="demo-heading">
+    <h2>Voyez AppFlow en action</h2>
+    <p>Une interface intuitive conçue pour la productivité</p>
+  </div>
+  <div class="demo-screen">
+    <img src="images/demo.jpg" alt="Démonstration interactive de l'interface AppFlow">
+  </div>
+</section>
+
+<script>
+// Animation au défilement
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.feature-card, .demo-screen').forEach(element => {
+  observer.observe(element);
+});
+</script>
+
+</body></html>

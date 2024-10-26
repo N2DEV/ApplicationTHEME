@@ -1,0 +1,353 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos - AppFlow</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #2D9CDB;
+  --secondary: #FFFFFF;
+  --accent: #F2994A;
+  --text-primary: #4F4F4F;
+  --text-secondary: #828282;
+  --gradient-bg: linear-gradient(135deg, #f5f9ff 0%, #ecf4ff 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.navbar {
+  background: white;
+  padding: 1rem 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.cta-button {
+  background: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.about-section {
+  margin-top: 80px;
+  padding: 4rem 5%;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 4rem 0;
+  background: var(--gradient-bg);
+  border-radius: 20px;
+  margin-bottom: 4rem;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.company-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+}
+
+.team-section {
+  margin: 4rem 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.team-member {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  object-fit: cover;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+}
+
+.values-section {
+  margin: 4rem 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.value-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .company-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+}
+</style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="index.html"><img src="https://via.placeholder.com/120x40?text=AppFlow" alt="AppFlow Logo" class="logo"></a>
+      <div class="nav-links">
+        <a href="fonctionnalite.html">Fonctionnalités</a>
+        <a href="tarif.html">Tarifs</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="tarif.html" class="cta-button" style="background-color: #F2994A; border-radius: 8px; padding: 12px 24px;">Essai Gratuit</a>
+    </div>
+  </nav>
+
+<section class="about-section">
+  <div class="about-container">
+    <div class="about-hero">
+      <h1>Notre Histoire</h1>
+      <p>AppFlow est née de la vision de simplifier la gestion de projets et d'améliorer la collaboration d'équipe.</p>
+    </div>
+
+    <div class="company-stats">
+      <div class="stat-item">
+        <div class="stat-number">100K+</div>
+        <div class="stat-label">Utilisateurs Actifs</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Pays</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Satisfaction Client</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Support Client</div>
+      </div>
+    </div>
+
+    <div class="team-section">
+      <h2>Notre Équipe de Direction</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="images/sarah.jpg" alt="Portrait de Sarah Martin, CEO" class="member-image">
+          <h3 class="member-name">Sarah Martin</h3>
+          <p class="member-role">CEO & Co-fondatrice</p>
+          <div class="social-links">
+            <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="images/david.jpg" alt="Portrait de David Chen, CTO" class="member-image">
+          <h3 class="member-name">David Chen</h3>
+          <p class="member-role">CTO & Co-fondateur</p>
+          <div class="social-links">
+            <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="images/marie.jpg" alt="Portrait de Marie Dubois, COO" class="member-image">
+          <h3 class="member-name">Marie Dubois</h3>
+          <p class="member-role">COO</p>
+          <div class="social-links">
+            <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="values-section">
+      <h2>Nos Valeurs</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-heart"></i></div>
+          <h3>Innovation</h3>
+          <p>Nous repoussons constamment les limites de ce qui est possible dans la gestion de projets.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-users"></i></div>
+          <h3>Collaboration</h3>
+          <p>Nous croyons en la puissance du travail d'équipe et de la communication ouverte.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-lock"></i></div>
+          <h3>Confiance</h3>
+          <p>La sécurité et la confidentialité de nos clients sont notre priorité absolue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Animation au défilement
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.team-member, .value-card, .stat-item').forEach(element => {
+  observer.observe(element);
+});
+</script>
+
+</body></html>
